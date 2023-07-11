@@ -16,21 +16,33 @@
         },
         "subjects": ["WEB205", "COM108"]
     }
+
+    // Xuất đối tượng
     console.log(sv);
 
     // Truy xuất thuộc tính
-    Sv.name = sv['name'].toUpperCase();
-    console.log(sv.name, sv.contact.email, sv.subjects[0]);
-    // Duyệt đối tượng theo key
-    for(var key in sv){
-        console.log(key, sv[key])
+    // Cách 1: doiTuong.thuocTinh
+    console.log(sv.name.toUpperCase(), sv.contact["email"], sv.subjects[0]);
+    console.log(sv.name.toUpperCase(), sv.contact.email, sv.subjects[0]);
+
+    // Nên dùng cách 2
+    // Cách 2: doiTuong["thuocTinh"]
+    console.log(sv["name"].toUpperCase());
+
+    // Duyệt thuộc tính của đối tượng
+    for (var key in sv){
+        console.log(key+": "+ sv[key]);
     }
-    // Chuyển đổi đổi tượng JSON sang chuỗi
+
+    // Chuyển đối tượng sang chuỗi
     var text = JSON.stringify(sv)
     console.log(text)
-    // Chuyển đổi chuỗi sang đối tượng JSON
-    var obj = JSON.parse(text);
-    console.log(obj, obj.name)
+
+    // Chuyển đối tượng sang đối tượng JSON
+    var obj = JSON.parse(text)
+    console.log(obj,obj.name)
+
+
 </script>
 </body>
 </html>

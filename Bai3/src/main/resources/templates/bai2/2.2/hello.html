@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmls:th="http://www.thymaleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<img th:src="@{/images/ca901590841315.5e21b1a4a7193.png}"/>
+<nav th:replace="~{bai2/2.2/layout/menu.html}"></nav>
 <h1 th:text="${message}"/>
+
+<!--<ul th:object="${sv}">-->
+<!--    <li th:text="${sv.name}"></li>-->
+<!--    <li th:text="*{name}"></li>-->
+<!--    <li th:text="${sv.gender}"></li>-->
+<!--    <li th:text="${sv.marks}"></li>-->
+<!--    <li th:text="*{email}"></li>-->
+<!--    <li th:text="${sv1.Contact.email}"></li>-->
+<!--    <li th:text="${sv1.subjects}"></li>-->
+<!--</ul>-->
 </body>
 </html>

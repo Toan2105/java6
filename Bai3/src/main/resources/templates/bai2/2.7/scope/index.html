@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<h3>Scopes &amp; Parameters</h3>
+<ul>
+    <li>A-Model: [[${a}]]</li>
+    <li>B-Request: [[${b}]]</li>
+<!--    <li>C-Session: [[${session.c}]]</li>-->
+<!--    <li>D-Application: [[${appication.d}]]</li>-->
+<!--    <li>X-Parameter: [[${param.x}]]</li>-->
+</ul>
+<a href="scope?x=FPT Polytechnic">FPT</a>
 </body>
 </html>
